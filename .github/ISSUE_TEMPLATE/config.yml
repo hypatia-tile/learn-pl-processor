@@ -1,0 +1,5 @@
+default_issue_enabled: false
+defaults:
+  -template: "feature_request.yml"
+    name: "feature_request"
+    about "Request an enhancement for learning"

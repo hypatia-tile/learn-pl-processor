@@ -1,0 +1,42 @@
+name: Feature Request
+description: Request an enhancement for the project
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to suggest a new feature! Please provide as much detail as possible to help us understand your request.
+
+  - type: input
+    id: feature-summary
+    attributes:
+      label: feature Summary
+      placeholder: Provide a brief summary of the feature you are requesting.
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: feature Description
+      placeholder: Describe the feature in detail. Explain what it is, how it works, and why it would be beneficial.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      placeholder: Describe specific use cases or scenarios where this feature would be useful.
+
+  - type: textarea
+    id: alternatives-considered
+    attributes:
+      label: Alternatives Considered
+      placeholder: Have you considered any alternative solutions or workarounds? If so, please describe them.
+
+  - type: input
+    id: additional-information
+    attributes:
+      label: Additional Information
+      placeholder: Provide any additional information or context that may help us evaluate your request.
