@@ -1,0 +1,79 @@
+name: "🛠 To-Do Task"
+description: "Create a clear and actionable task for the project."
+title: "[TASK] "
+labels:
+  - task
+  - todo
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: "🛠 Task Summary"
+      description: "Short description of the task."
+      placeholder: "Implement a small-step semantics evaluator."
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: "🎯 Goal"
+      description: "What should be achieved when this task is completed?"
+      placeholder: "A clear, concrete outcome."
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "📚 Context"
+      description: "Explain why this task exists or how it fits into the PL processor workflow."
+      placeholder: "This task supports ___. It is related to ____."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "✔ Checklist"
+      description: "Break down the task into steps."
+      options:
+        - label: "Step 1"
+        - label: "Step 2"
+        - label: "Step 3"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: dirs
+    attributes:
+      label: "📂 Affected Directories"
+      description: "Select all relevant directories."
+      multiple: true
+      options:
+        - experiments/
+        - planning/
+        - notebooks/
+        - publish/
+        - digressions/
+        - terminologies/
+        - conversations/
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "🔁 Dependencies"
+      description: "List related issues, pull requests, or tasks."
+      placeholder: "Depends on #12"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "📎 Additional Notes"
+    validations:
+      required: false
+

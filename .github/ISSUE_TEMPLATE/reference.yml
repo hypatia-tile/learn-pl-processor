@@ -1,0 +1,72 @@
+name: "📚 Add Reference"
+description: "Introduce an interesting reference (paper, article, book, video) related to PL, semantics, compilers, or foundational topics."
+title: "[REF] "
+labels:
+  - reference
+  - reading
+body:
+  - type: input
+    id: ref_title
+    attributes:
+      label: "📚 Reference Title"
+      description: "Example: 'A Structural Operational Semantics for Small-Step Languages'"
+      placeholder: "Enter the title of the reference"
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: "🔗 Link"
+      description: "URL to the reference"
+      placeholder: "https://example.com/paper.pdf"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "📝 Summary"
+      description: "What is it about?"
+      placeholder: "A short summary of the reference."
+    validations:
+      required: false
+
+  - type: textarea
+    id: why_interesting
+    attributes:
+      label: "🧠 Why It's Interesting"
+      description: "Why is this reference relevant or valuable?"
+      placeholder: "Explain the connection to PL theory, semantics, compilers, etc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_topics
+    attributes:
+      label: "📌 Related Topics"
+      description: "Add related concepts or areas (e.g., parsing, denotational semantics, type systems)"
+      placeholder: "- operational semantics\n- AST representation\n- program analysis"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: repo_location
+    attributes:
+      label: "🗂 Where it will go in the repository"
+      options:
+        - notebooks/
+        - digressions/
+        - terminologies/
+        - experiments/
+        - publish/
+        - planning/
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "📎 Additional Notes"
+    validations:
+      required: false
